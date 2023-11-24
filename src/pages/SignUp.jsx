@@ -57,17 +57,6 @@ const SignUp = () => {
           REGISTER NOW
         </h1>
         <Lottie animationData={signUpAnimation} loop={false}></Lottie>
-        {/* <button className="btn w-full bg-[#F0A83D] text-white hover:text-[#180202]">
-          <FcGoogle className="text-2xl"></FcGoogle>
-          Sign in with Google
-        </button> */}
-        {/* <p className="text-sm">
-          Already have an account?{" "}
-          <Link className="text-[#180202] font-bold " to="/login">
-            {" "}
-            Go To Login
-          </Link>{" "}
-        </p> */}
       </div>
 
       <div className="card-body max-w-[720px] mx-auto">
@@ -144,10 +133,10 @@ const SignUp = () => {
           <FcGoogle className="text-2xl"></FcGoogle>
           Sign in with Google
         </button>
-        <p className="text-sm text-center ">
-          Already have an account?{" "}
-          <Link className="text-blue-500 font-bold " to="/login">
-            Go To Login
+        <p className=" text-center ">
+          Already have an account? Go To{" "}
+          <Link className="text-[#180202] font-bold " to="/login">
+            Login
           </Link>
         </p>
       </div>
