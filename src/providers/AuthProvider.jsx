@@ -1,13 +1,15 @@
 import { createContext, useEffect, useState } from "react";
 import {
+  GoogleAuthProvider,
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
-import axios from "axios";
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
@@ -15,6 +17,8 @@ const AuthProvider = (props = {}) => {
   const { children } = props || {};
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  const provider = new GoogleAuthProvider();
 
   const createUser = (email, password) => {
     setLoading(true);
@@ -26,54 +30,40 @@ const AuthProvider = (props = {}) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
+  const googleSignIn = () => {
+    return signInWithPopup(auth, provider);
+  };
+
+  const updateUser = (userInfo) => {
+    return updateProfile(auth.currentUser, userInfo);
+  };
   const logOut = () => {
     setLoading(true);
     return signOut(auth);
   };
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      const userEmail = currentUser?.email || user?.email;
-      const loggedUser = { email: userEmail };
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      console.log("On Auth State change :", currentUser);
       setUser(currentUser);
-      console.log("Current User:", currentUser);
       setLoading(false);
-
-      if (currentUser) {
-        axios
-          .post(
-            "https://car-doctor-server-xi-puce.vercel.app/jwt",
-            loggedUser,
-            {
-              withCredentials: true,
-            }
-          )
-          .then((res) => {
-            console.log(res.data);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      } else {
-        axios
-          .post(
-            "https://car-doctor-server-xi-puce.vercel.app/logout",
-            loggedUser,
-            {
-              withCredentials: true,
-            }
-          )
-          .then((res) => {
-            console.log(res.data);
-          });
-      }
     });
     return () => {
-      return unsubscribe();
+      unSubscribe();
     };
-  }, [user]);
+  }, []);
 
-  const authInfo = { auth, user, loading, createUser, signInUser, logOut };
+  const authInfo = {
+    auth,
+    user,
+    loading,
+    createUser,
+    signInUser,
+    logOut,
+    updateUser,
+    setUser,
+    googleSignIn,
+  };
   return (
     <>
       <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
