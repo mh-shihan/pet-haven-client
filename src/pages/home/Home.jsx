@@ -1,7 +1,9 @@
+import Banner from "./Banner";
+
 const Home = () => {
   return (
     <div>
-      <h1 className="text-3xl">I am From home</h1>
+      <Banner></Banner>
     </div>
   );
 };
