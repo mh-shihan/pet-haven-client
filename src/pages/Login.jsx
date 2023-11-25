@@ -60,11 +60,10 @@ const Login = () => {
 
   return (
     <div className="w-11/12 mx-auto mt-32 flex flex-col md:flex-row ">
-      <div className="w-full xl:w-1/2 h-[60vh]">
+      <div className="w-full xl:w-1/2  h-[60vh]">
         <h1 className="text-3xl md:text-5xl font-bold text-center  text-[#180202] ">
           Login now!
         </h1>
-
         <Lottie animationData={loginAnimation} loop={false}></Lottie>
       </div>
       <div className="w-full xl:w-1/2">
