@@ -2,6 +2,7 @@ import Lottie from "lottie-react";
 import errorAnimation from "../assets/animaiton/404Animation.json";
 import { Link } from "react-router-dom";
 import NavBar from "../shared/Navbar/NavBar";
+import Footer from "../shared/Footer/Footer";
 
 const ErrorPage = () => {
   return (
@@ -15,6 +16,7 @@ const ErrorPage = () => {
           </button>
         </Link>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

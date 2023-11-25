@@ -133,7 +133,7 @@ const SignUp = () => {
 
           <div className="form-control mt-3"></div>
           <div className="form-control mt-6">
-            <button className="btn bg-[#F0A83D] font-bold text-xl text-white hover:text-[#180202]">
+            <button className="btn bg-[#F0A83D] hover:bg-[#180202] font-bold text-xl text-white ">
               Register
             </button>
           </div>

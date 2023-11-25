@@ -1,193 +1,132 @@
-import banner1 from "../../assets/banner/banner-1.jpg";
-import banner2 from "../../assets/banner/banner-2.jpg";
-import banner3 from "../../assets/banner/banner-3.jpg";
-import banner4 from "../../assets/banner/banner-4.jpg";
-import banner5 from "../../assets/banner/banner-5.jpg";
-import banner6 from "../../assets/banner/banner-6.jpg";
+import { Carousel, IconButton } from "@material-tailwind/react";
+import slide1 from "../../assets/banner/slide-1.png";
+import slide2 from "../../assets/banner/slide-2.png";
+import slide3 from "../../assets/banner/slide-3.png";
 
 const Banner = () => {
   return (
-    <div className="carousel w-full h-[90vh]">
-      <div id="slide1" className="carousel-item relative w-full">
-        <img src={banner1} className="w-full rounded-b-xl " />
-        <div className="absolute h-full  bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] top-0 left-0 rounded-b-xl  ">
-          <div className="pl-6 md:pl-10 lg:pl-32 pt-6 md:pt-24 lg:pt-32 w-3/4 lg:w-2/4 h-full text-white space-y-2 md:space-y-6 ">
-            <h2 className=" text-2xl md:text-4xl lg:text-6xl font-bold">
-              Affordable Price For Car Servicing
+    <div className="mt-10">
+      <Carousel
+        className="rounded-xl"
+        prevArrow={({ handlePrev }) => (
+          <IconButton
+            variant="text"
+            color="white"
+            size="lg"
+            onClick={handlePrev}
+            className="!absolute top-2/4 left-4 -translate-y-2/4 bg-[#F0A83D] rounded-full hover:bg-[#180202]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="h-6 w-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+              />
+            </svg>
+          </IconButton>
+        )}
+        nextArrow={({ handleNext }) => (
+          <IconButton
+            variant="text"
+            color="white"
+            size="lg"
+            onClick={handleNext}
+            className="!absolute top-2/4 !right-4 -translate-y-2/4 bg-[#F0A83D] rounded-full hover:bg-[#180202]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="h-6 w-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+              />
+            </svg>
+          </IconButton>
+        )}
+      >
+        <div className="relative">
+          <img
+            src={slide1}
+            alt="image 1"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute right-[12%] bottom-[25%] space-y-5">
+            <h3 className="text-[#F0A83D] inline-block px-4 text-lg md:text-3xl font-bold rounded-sm bg-white">
+              We Keep Pets For Pleasure
+            </h3>
+            <h2 className=" text-xl md:text-4xl font-extrabold   text-[#180202]">
+              Helping Your Pets Get Rid <br /> of Annoying pets
             </h2>
-            <p className="text-sm md:text-base lg:text-lg">
-              There are many variations of passages of available, but the
-              majority have suffered alteration in some form
-            </p>
-            <div className="flex gap-2 ">
-              <button className="btn btn-secondary bg-[#FF3811] border-[#FF3811] text-white">
-                Discover More
-              </button>
-              <button className="btn btn-secondary bg-transparent md:ml-6 border-base-100 text-white">
-                Latest Project
-              </button>
-            </div>
+            <h4 className="text-[#180202]">
+              We can do a anything for your pet. So do not worry about it.
+              <br />
+              So book your service
+            </h4>
+            <button className="bg-[#F0A83D] hover:bg-[#180202] px-4 py-2 text-base-100 text-xl rounded-l-full rounded-r-full">
+              Book Now
+            </button>
           </div>
         </div>
-        <div className="absolute flex justify-end bottom-0  transform -translate-y-1/2 left-5 right-5 ">
-          <a href="#slide6" className="btn btn-circle mr-5">
-            ❮
-          </a>
-          <a href="#slide2" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
-      </div>
-      <div id="slide2" className="carousel-item relative w-full">
-        <img src={banner2} className="w-full rounded-xl" />
-        <div className="absolute h-full  bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] top-0 left-0 rounded-xl  ">
-          <div className="pl-6 md:pl-10 lg:pl-32 pt-6 md:pt-24 lg:pt-32 w-3/4 lg:w-2/4 h-full text-white space-y-2 md:space-y-6 ">
-            <h2 className=" text-2xl md:text-4xl lg:text-6xl font-bold">
-              Affordable Price For Car Servicing
+        <div>
+          <img
+            src={slide2}
+            alt="image 2"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute right-[12%] bottom-[25%] space-y-5">
+            <h3 className="text-[#F0A83D] inline-block px-4 text-lg md:text-3xl font-bold rounded-sm bg-white">
+              We Keep Pets For Pleasure
+            </h3>
+            <h2 className=" text-xl md:text-4xl font-extrabold   text-[#180202]">
+              Helping Your Pets Get Rid <br /> of Annoying pets
             </h2>
-            <p className="text-sm md:text-base lg:text-lg">
-              There are many variations of passages of available, but the
-              majority have suffered alteration in some form
-            </p>
-            <div className="flex gap-2 ">
-              <button className="btn btn-secondary bg-[#FF3811] border-[#FF3811] text-white">
-                Discover More
-              </button>
-              <button className="btn btn-secondary bg-transparent md:ml-6 border-base-100 text-white">
-                Latest Project
-              </button>
-            </div>
+            <h4 className="text-[#180202]">
+              We can do a anything for your pet. So do not worry about it.
+              <br />
+              So book your service
+            </h4>
+            <button className="bg-[#F0A83D] hover:bg-[#180202] px-4 py-2 text-base-100 text-xl rounded-l-full rounded-r-full">
+              Book Now
+            </button>
           </div>
         </div>
-        <div className="absolute flex justify-end bottom-0 transform -translate-y-1/2 left-5 right-5">
-          <a href="#slide1" className="btn btn-circle mr-5">
-            ❮
-          </a>
-          <a href="#slide3" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
-      </div>
-      <div id="slide3" className="carousel-item relative w-full">
-        <img src={banner3} className="w-full rounded-xl" />
-        <div className="absolute h-full  bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] top-0 left-0 rounded-xl  ">
-          <div className="pl-6 md:pl-10 lg:pl-32 pt-6 md:pt-24 lg:pt-32 w-3/4 lg:w-2/4 h-full text-white space-y-2 md:space-y-6 ">
-            <h2 className=" text-2xl md:text-4xl lg:text-6xl font-bold">
-              Affordable Price For Car Servicing
+        <div>
+          <div className="absolute right-[12%] bottom-[25%] space-y-5">
+            <h3 className="text-[#F0A83D] inline-block px-4 text-lg md:text-3xl font-bold rounded-sm bg-white">
+              We Keep Pets For Pleasure
+            </h3>
+            <h2 className=" text-xl md:text-4xl font-extrabold   text-[#180202]">
+              Helping Your Pets Get Rid <br /> of Annoying pets
             </h2>
-            <p className="text-sm md:text-base lg:text-lg">
-              There are many variations of passages of available, but the
-              majority have suffered alteration in some form
-            </p>
-            <div className="flex gap-2 ">
-              <button className="btn btn-secondary bg-[#FF3811] border-[#FF3811] text-white">
-                Discover More
-              </button>
-              <button className="btn btn-secondary bg-transparent md:ml-6 border-base-100 text-white">
-                Latest Project
-              </button>
-            </div>
+            <h4 className="text-[#180202]">
+              We can do a anything for your pet. So do not worry about it.
+              <br />
+              So book your service
+            </h4>
+            <button className="bg-[#F0A83D] hover:bg-[#180202] px-4 py-2 text-base-100 text-xl rounded-l-full rounded-r-full">
+              Book Now
+            </button>
           </div>
+          <img
+            src={slide3}
+            alt="image 3"
+            className="h-full w-full object-cover"
+          />
         </div>
-        <div className="absolute flex justify-end bottom-0 transform -translate-y-1/2 left-5 right-5 ">
-          <a href="#slide2" className="btn btn-circle mr-5">
-            ❮
-          </a>
-          <a href="#slide4" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
-      </div>
-      <div id="slide4" className="carousel-item relative w-full">
-        <img src={banner4} className="w-full rounded-xl" />
-        <div className="absolute h-full  bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] top-0 left-0 rounded-xl  ">
-          <div className="pl-6 md:pl-10 lg:pl-32 pt-6 md:pt-24 lg:pt-32 w-3/4 lg:w-2/4 h-full text-white space-y-2 md:space-y-6 ">
-            <h2 className=" text-2xl md:text-4xl lg:text-6xl font-bold">
-              Affordable Price For Car Servicing
-            </h2>
-            <p className="text-sm md:text-base lg:text-lg">
-              There are many variations of passages of available, but the
-              majority have suffered alteration in some form
-            </p>
-            <div className="flex  gap-2 ">
-              <button className="btn btn-secondary bg-[#FF3811] border-[#FF3811] text-white">
-                Discover More
-              </button>
-              <button className="btn btn-secondary bg-transparent md:ml-6 border-base-100 text-white">
-                Latest Project
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="absolute flex justify-end bottom-0 transform -translate-y-1/2 left-5 right-5">
-          <a href="#slide3" className="btn btn-circle mr-5">
-            ❮
-          </a>
-          <a href="#slide5" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
-      </div>
-      <div id="slide5" className="carousel-item relative w-full">
-        <img src={banner5} className="w-full rounded-xl" />
-        <div className="absolute h-full  bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] top-0 left-0 rounded-xl  ">
-          <div className="pl-6 md:pl-10 lg:pl-32 pt-6 md:pt-24 lg:pt-32 w-3/4 lg:w-2/4 h-full text-white space-y-2 md:space-y-6 ">
-            <h2 className=" text-2xl md:text-4xl lg:text-6xl font-bold">
-              Affordable Price For Car Servicing
-            </h2>
-            <p className="text-sm md:text-base lg:text-lg">
-              There are many variations of passages of available, but the
-              majority have suffered alteration in some form
-            </p>
-            <div className="flex gap-2 ">
-              <button className="btn btn-secondary bg-[#FF3811] border-[#FF3811] text-white">
-                Discover More
-              </button>
-              <button className="btn btn-secondary bg-transparent md:ml-6 border-base-100 text-white">
-                Latest Project
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="absolute flex justify-end bottom-0 transform -translate-y-1/2 left-5 right-5">
-          <a href="#slide4" className="btn btn-circle mr-5">
-            ❮
-          </a>
-          <a href="#slide6" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
-      </div>
-      <div id="slide6" className="carousel-item relative w-full">
-        <img src={banner6} className="w-full rounded-xl" />
-        <div className="absolute h-full  bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] top-0 left-0 rounded-xl  ">
-          <div className="pl-6 md:pl-10 lg:pl-32 pt-6 md:pt-24 lg:pt-32 w-3/4 lg:w-2/4 h-full text-white space-y-2 md:space-y-6 ">
-            <h2 className=" text-2xl md:text-4xl lg:text-6xl font-bold">
-              Affordable Price For Car Servicing
-            </h2>
-            <p className="text-sm md:text-base lg:text-lg">
-              There are many variations of passages of available, but the
-              majority have suffered alteration in some form
-            </p>
-            <div className="flex gap-2 ">
-              <button className="btn btn-secondary bg-[#FF3811] border-[#FF3811] text-white">
-                Discover More
-              </button>
-              <button className="btn btn-secondary bg-transparent md:ml-6 border-base-100 text-white">
-                Latest Project
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="absolute flex justify-end bottom-0 transform -translate-y-1/2 left-5 right-5">
-          <a href="#slide5" className="btn btn-circle mr-5">
-            ❮
-          </a>
-          <a href="#slide1" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
-      </div>
+      </Carousel>
     </div>
   );
 };

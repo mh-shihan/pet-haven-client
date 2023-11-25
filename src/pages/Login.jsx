@@ -108,7 +108,7 @@ const Login = () => {
                   </div>
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn  bg-[#F0A83D] hover:text-[#180202] text-white text-lg md:text-2xl">
+                  <button className="btn  bg-[#F0A83D] hover:bg-[#180202]  text-white text-lg md:text-2xl">
                     Login
                   </button>
                 </div>
@@ -125,7 +125,7 @@ const Login = () => {
               </form>
               <button
                 onClick={handleGoogleLogin}
-                className="btn btn-ghost font-bold text-[#180202]"
+                className="btn  font-bold text-[#180202]"
               >
                 <FcGoogle></FcGoogle>
                 Login With Google

@@ -62,7 +62,7 @@ const NavBar = () => {
     <div className="flex items-center gap-2">
       <button
         onClick={handleLogOut}
-        className="btn  text-white bg-[#F0A83D] border-[#F0A83D] hover:bg-[#F9A83D] hover:border-[#F9A83D]"
+        className="btn  text-white bg-[#F0A83D] hover:bg-[#180202] border-[#F0A83D] hover:bg-[#F9A83D] hover:border-[#F9A83D]"
       >
         Log Out
       </button>
@@ -138,7 +138,7 @@ const NavBar = () => {
             <div>{profile}</div>
           ) : (
             <Link to="/login">
-              <button className="btn  bg-[#F0A83D] border-[#F0A83D] text-white ml-2">
+              <button className="btn  bg-[#F0A83D] hover:bg-[#180202] border-[#F0A83D] text-white ml-2">
                 Login
               </button>
             </Link>
