@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import navLogo from "../../assets/logo/pet-haven.png";
+
 import { IoIosArrowDropdown } from "react-icons/io";
 
 const NavBar = () => {
@@ -120,8 +120,9 @@ const NavBar = () => {
           </ul>
         </div>
         <Link to={"/"}>
-          <a className=" normal-case md:text-5xl ">
-            <img src={navLogo} alt="" />
+          <a className=" normal-case md:text-5xl  ">
+            <span className="text-[#180202] font-bold">Pet</span>
+            <span className="font-extrabold text-[#F0A83D]">Haven</span>
           </a>
         </Link>
       </div>
