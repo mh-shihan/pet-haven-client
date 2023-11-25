@@ -62,7 +62,7 @@ const NavBar = () => {
     <div className="flex items-center gap-2">
       <button
         onClick={handleLogOut}
-        className="btn  text-white bg-[#F0A83D] hover:bg-[#180202] border-[#F0A83D] hover:bg-[#F9A83D] hover:border-[#F9A83D]"
+        className="btn  text-white bg-[#F0A83D] hover:bg-[#180202] border-[#F0A83D]  hover:border-[#F9A83D]"
       >
         Log Out
       </button>
@@ -120,7 +120,7 @@ const NavBar = () => {
           </ul>
         </div>
         <Link to={"/"}>
-          <a className=" normal-case md:text-5xl  ">
+          <a className=" text-2xl md:text-5xl  ">
             <span className="text-[#180202] font-bold">Pet</span>
             <span className="font-extrabold text-[#F0A83D]">Haven</span>
           </a>

@@ -57,74 +57,77 @@ const Banner = () => {
           </IconButton>
         )}
       >
-        <div className="relative">
+        {/* First Slide */}
+        <div className="relative ">
           <img
             src={slide1}
             alt="image 1"
             className="h-full w-full object-cover"
           />
-          <div className="absolute right-[12%] bottom-[25%] space-y-5">
-            <h3 className="text-[#F0A83D] inline-block px-4 text-lg md:text-3xl font-bold rounded-sm bg-white">
+          <div className="absolute right-2 lg:right-[12%] bottom-5 md:bottom-24 lg:bottom-[25%] lg:space-y-5">
+            <h3 className="text-[#F0A83D] inline-block lg:px-4 text-xs  md:text-3xl font-bold rounded-sm bg-white">
               We Keep Pets For Pleasure
             </h3>
-            <h2 className=" text-xl md:text-4xl font-extrabold   text-[#180202]">
+            <h2 className=" text-xs md:text-4xl lg:font-extrabold   text-[#180202]">
               Helping Your Pets Get Rid <br /> of Annoying pets
             </h2>
-            <h4 className="text-[#180202]">
+            <h4 className="text-[#180202] hidden lg:block">
               We can do a anything for your pet. So do not worry about it.
               <br />
               So book your service
             </h4>
-            <button className="bg-[#F0A83D] hover:bg-[#180202] px-4 py-2 text-base-100 text-xl rounded-l-full rounded-r-full">
+            <button className="bg-[#F0A83D]  hover:bg-[#180202] px-4 md:py-2 text-base-100 text-xs md:text-xl rounded-l-full rounded-r-full">
               Book Now
             </button>
           </div>
         </div>
-        <div>
+        {/* Second Slide */}
+        <div className="relative ">
           <img
             src={slide2}
             alt="image 2"
             className="h-full w-full object-cover"
           />
-          <div className="absolute right-[12%] bottom-[25%] space-y-5">
-            <h3 className="text-[#F0A83D] inline-block px-4 text-lg md:text-3xl font-bold rounded-sm bg-white">
+          <div className="absolute right-2 lg:right-[12%] bottom-5 md:bottom-24 lg:bottom-[25%] lg:space-y-5">
+            <h3 className="text-[#F0A83D] inline-block lg:px-4 text-xs  md:text-3xl font-bold rounded-sm bg-white">
               We Keep Pets For Pleasure
             </h3>
-            <h2 className=" text-xl md:text-4xl font-extrabold   text-[#180202]">
+            <h2 className=" text-xs md:text-4xl lg:font-extrabold   text-[#180202]">
               Helping Your Pets Get Rid <br /> of Annoying pets
             </h2>
-            <h4 className="text-[#180202]">
+            <h4 className="text-[#180202] hidden lg:block">
               We can do a anything for your pet. So do not worry about it.
               <br />
               So book your service
             </h4>
-            <button className="bg-[#F0A83D] hover:bg-[#180202] px-4 py-2 text-base-100 text-xl rounded-l-full rounded-r-full">
+            <button className="bg-[#F0A83D]  hover:bg-[#180202] px-4 md:py-2 text-base-100 text-xs md:text-xl rounded-l-full rounded-r-full">
               Book Now
             </button>
           </div>
         </div>
-        <div>
-          <div className="absolute right-[12%] bottom-[25%] space-y-5">
-            <h3 className="text-[#F0A83D] inline-block px-4 text-lg md:text-3xl font-bold rounded-sm bg-white">
-              We Keep Pets For Pleasure
-            </h3>
-            <h2 className=" text-xl md:text-4xl font-extrabold   text-[#180202]">
-              Helping Your Pets Get Rid <br /> of Annoying pets
-            </h2>
-            <h4 className="text-[#180202]">
-              We can do a anything for your pet. So do not worry about it.
-              <br />
-              So book your service
-            </h4>
-            <button className="bg-[#F0A83D] hover:bg-[#180202] px-4 py-2 text-base-100 text-xl rounded-l-full rounded-r-full">
-              Book Now
-            </button>
-          </div>
+        {/* Third Slide */}
+        <div className="relative ">
           <img
             src={slide3}
             alt="image 3"
             className="h-full w-full object-cover"
           />
+          <div className="absolute right-2 lg:right-[12%] bottom-5 md:bottom-24 lg:bottom-[25%] lg:space-y-5">
+            <h3 className="text-[#F0A83D] inline-block lg:px-4 text-xs  md:text-3xl font-bold rounded-sm bg-white">
+              We Keep Pets For Pleasure
+            </h3>
+            <h2 className=" text-xs md:text-4xl lg:font-extrabold   text-[#180202]">
+              Helping Your Pets Get Rid <br /> of Annoying pets
+            </h2>
+            <h4 className="text-[#180202] hidden lg:block">
+              We can do a anything for your pet. So do not worry about it.
+              <br />
+              So book your service
+            </h4>
+            <button className="bg-[#F0A83D]  hover:bg-[#180202] px-4 md:py-2 text-base-100 text-xs md:text-xl rounded-l-full rounded-r-full">
+              Book Now
+            </button>
+          </div>
         </div>
       </Carousel>
     </div>
