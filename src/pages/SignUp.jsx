@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 import signUpAnimation from "../assets/animaiton/signUpAnimation.json";
 
 const SignUp = () => {
-  const { createUser, updateUser, setUser } = useAuth();
+  const { createUser, updateUser, setUser, googleSignIn } = useAuth();
   const navigate = useNavigate();
   const [showPassword1, setShowPassword1] = useState(false);
 
@@ -48,6 +48,15 @@ const SignUp = () => {
         const errorMessage = error.message;
         console.log(errorMessage);
       });
+  };
+
+  const handleGoogleLogin = () => {
+    googleSignIn()
+      .then((result) => {
+        console.log(result.user);
+        navigate("/");
+      })
+      .catch((error) => console.log(error));
   };
 
   return (
@@ -129,7 +138,10 @@ const SignUp = () => {
             </button>
           </div>
         </form>
-        <button className="btn mt-4 hover:text-[#180202] ">
+        <button
+          onClick={handleGoogleLogin}
+          className="btn mt-4 hover:text-[#180202] "
+        >
           <FcGoogle className="text-2xl"></FcGoogle>
           Sign in with Google
         </button>
