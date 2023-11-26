@@ -1,152 +1,82 @@
 [
   {
-    "service_id": "04",
-    "title": "Engine Oil Change",
-    "img": "https://i.ibb.co/T2cpBd5/888.jpg",
-    "price": "20.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
-    "facility": [
-      {
-        "name": "Instant Car Services",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "24/7 Quality Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Easy Customer Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Quality Cost Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      }
-    ]
+    "serviceType": "dogSetting",
+    "serviceImage": "https://i.ibb.co/4WWv3kw/dog-setting.jpg",
+    "serviceName": "Dog Sitting",
+    "serviceDescription": "Professional dog sitting service for your furry friend.",
+    "providerImage": "https://i.ibb.co/wCm3405/dog-provider.jpg",
+    "providerName": "Emily",
+    "serviceArea": "Dhaka, Bangladesh",
+    "servicePrice": "$25"
   },
   {
-    "service_id": "05",
-    "title": "Battery Charge",
-    "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
-    "price": "20.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
-    "facility": [
-      {
-        "name": "Instant Car Services",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "24/7 Quality Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Easy Customer Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Quality Cost Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      }
-    ]
+    "serviceType": "catSetting",
+    "serviceImage": "https://i.ibb.co/K5kRbMB/cat-setting.jpg",
+    "serviceName": "Cat Sitting",
+    "serviceDescription": "Reliable cat sitting service to ensure your cat's comfort.",
+    "providerImage": "https://i.ibb.co/ZXznGwf/cat-provider.jpg",
+    "providerName": "Sophia",
+    "serviceArea": "Dhaka, Bangladesh",
+    "servicePrice": "$20"
   },
   {
-    "service_id": "01",
-    "title": "Full car Repair",
-    "img": "https://i.ibb.co/R6Z2nFM/55.jpg",
-    "price": "200.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
-    "facility": [
-      {
-        "name": "Instant Car Services",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "24/7 Quality Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Easy Customer Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Quality Cost Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      }
-    ]
+    "serviceType": "horseSetting",
+    "serviceImage": "https://i.ibb.co/C7h15yq/horse-setting.jpg",
+    "serviceName": "Horse Sitting",
+    "serviceDescription": "Experienced horse sitting for your majestic companions.",
+    "providerImage": "https://i.ibb.co/ZWSBk5k/horse-provider.jpg",
+    "providerName": "Olivia",
+    "serviceArea": "Dhaka, Bangladesh",
+    "servicePrice": "$50"
   },
   {
-    "service_id": "02",
-    "title": "Engine Repair",
-    "img": "https://i.ibb.co/5MvmD2g/88.jpg",
-    "price": "150.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
-    "facility": [
-      {
-        "name": "Instant Car Services",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "24/7 Quality Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Easy Customer Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Quality Cost Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      }
-    ]
+    "serviceType": "tortoiseSetting",
+    "serviceImage": "https://i.ibb.co/drvnPJT/tortoise-setting.jpg",
+    "serviceName": "Tortoise Sitting",
+    "serviceDescription": "Specialized care for your slow and steady tortoise.",
+    "providerImage": "https://i.ibb.co/GxqjQCs/tortoise-provider.jpg",
+    "providerName": "Ava",
+    "serviceArea": "Dhaka, Bangladesh",
+    "servicePrice": "$15"
   },
   {
-    "service_id": "03",
-    "title": "Automatic Services",
-    "img": "https://i.ibb.co/wh7t3N3/555.jpg",
-    "price": "30.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
-    "facility": [
-      {
-        "name": "Instant Car Services",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "24/7 Quality Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Easy Customer Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Quality Cost Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      }
-    ]
+    "serviceType": "birdSetting",
+    "serviceImage": "https://i.ibb.co/Xt3vGc0/bird-setting.jpg",
+    "serviceName": "Bird Sitting",
+    "serviceDescription": "Gentle care for your feathered friends while you're away.",
+    "providerImage": "https://i.ibb.co/zQXL03K/bird-provider.jpg",
+    "providerName": "Emma",
+    "serviceArea": "Dhaka, Bangladesh",
+    "servicePrice": "$18"
   },
   {
-    "service_id": "06",
-    "title": "Electrical System",
-    "img": "https://i.ibb.co/KzCG8qr/8888.jpg",
-    "price": "20.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
-    "facility": [
-      {
-        "name": "Instant Car Services",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "24/7 Quality Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Easy Customer Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Quality Cost Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      }
-    ]
+    "serviceType": "mammalSetting",
+    "serviceImage": "https://i.ibb.co/jwt6HG6/small-mammal.jpg",
+    "serviceName": "Mammal Sitting",
+    "serviceDescription": "Comprehensive care for various mammal species.",
+    "providerImage": "https://i.ibb.co/fQjmJPG/mammal-provider.jpg",
+    "providerName": "Isabella",
+    "serviceArea": "Dhaka, Bangladesh",
+    "servicePrice": "$30"
+  },
+  {
+    "serviceType": "fishSetting",
+    "serviceImage": "https://i.ibb.co/dGyBTDW/fish-setting.jpg",
+    "serviceName": "Fish Sitting",
+    "serviceDescription": "Comprehensive care for various mammal species.",
+    "providerImage": "https://i.ibb.co/rMx2GQw/fish-provider.jpg",
+    "providerName": "Mia",
+    "serviceArea": "Dhaka, Bangladesh",
+    "servicePrice": "$30"
+  },
+  {
+    "serviceType": "medicalService",
+    "serviceImage": "https://i.ibb.co/C2zgqtg/medical-service.jpg",
+    "serviceName": "Medical Services",
+    "serviceDescription": "Veterinary care for pets with special medical needs.",
+    "providerImage": "https://i.ibb.co/k275Gj4/pet-doctor.jpg",
+    "providerName": "John",
+    "serviceArea": "Dhaka, Bangladesh",
+    "servicePrice": "$100"
   }
 ]

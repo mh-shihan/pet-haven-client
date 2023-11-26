@@ -14,7 +14,7 @@ const Banner = () => {
             color="white"
             size="lg"
             onClick={handlePrev}
-            className="!absolute top-2/4 left-4 -translate-y-2/4 bg-[#F0A83D] rounded-full hover:bg-[#180202]"
+            className="!absolute top-2/4 lg:left-4 2xl:left-24 -translate-y-2/4 lg:bg-[#F0A83D] rounded-full hover:bg-[#180202]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ const Banner = () => {
             color="white"
             size="lg"
             onClick={handleNext}
-            className="!absolute top-2/4 !right-4 -translate-y-2/4 bg-[#F0A83D] rounded-full hover:bg-[#180202]"
+            className="!absolute top-2/4 !right-4 2xl:!right-24 -translate-y-2/4  lg:bg-[#F0A83D] rounded-full hover:bg-[#180202]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,7 @@ const Banner = () => {
             alt="image 1"
             className="h-full w-full object-cover"
           />
-          <div className="absolute right-2 lg:right-[12%] bottom-5 md:bottom-24 lg:bottom-[25%] lg:space-y-5">
+          <div className="absolute right-2 lg:right-[12%] xl:right-[20%] bottom-5 md:bottom-24 lg:bottom-[25%] xl:bottom-[40%] lg:space-y-5">
             <h3 className="text-[#F0A83D] inline-block lg:px-4 text-xs  md:text-3xl font-bold rounded-sm bg-white">
               We Keep Pets For Pleasure
             </h3>
