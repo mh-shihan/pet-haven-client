@@ -9,9 +9,9 @@ const ServiceCard = (props = {}) => {
   const { popularService } = props || {};
   const {
     _id,
-    serviceType,
     serviceImage,
     serviceName,
+    serviceType,
     serviceDescription,
     providerImage,
     providerName,

@@ -4,8 +4,9 @@ import useAuth from "../hooks/useAuth";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import Swal from "sweetalert2";
+
 import signUpAnimation from "../assets/animaiton/signUpAnimation.json";
+import toast from "react-hot-toast";
 
 const SignUp = () => {
   const { createUser, updateUser, setUser, googleSignIn } = useAuth();
@@ -20,6 +21,8 @@ const SignUp = () => {
     const password = form.password.value;
     const image_url = form.image_url.value;
     console.log(name, email, password, image_url);
+
+    const toastId = toast.loading("Register....");
 
     createUser(email, password)
       .then((result) => {
@@ -36,16 +39,18 @@ const SignUp = () => {
           })
           .catch((error) => console.log(error));
         e.target.reset();
-        Swal.fire({
-          title: "Good job!",
-          text: "Registration Successful!",
-          icon: "success",
-        });
+        // Swal.fire({
+        //   title: "Good job!",
+        //   text: "Registration Successful!",
+        //   icon: "success",
+        // });
+        toast.success("Registration Successful", { id: toastId });
 
         navigate("/");
       })
       .catch((error) => {
         const errorMessage = error.message;
+        toast.error(errorMessage, { id: toastId });
         console.log(errorMessage);
       });
   };
@@ -53,10 +58,15 @@ const SignUp = () => {
   const handleGoogleLogin = () => {
     googleSignIn()
       .then((result) => {
+        const toastId = toast.loading("Logging....");
+        toast.success("Logged In ..", { id: toastId });
         console.log(result.user);
         navigate("/");
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        toast.error(error.message);
+        console.log(error);
+      });
   };
 
   return (

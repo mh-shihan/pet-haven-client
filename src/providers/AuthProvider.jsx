@@ -13,6 +13,7 @@ import app from "../firebase/firebase.config";
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
+
 const AuthProvider = (props = {}) => {
   const { children } = props || {};
   const [user, setUser] = useState(null);

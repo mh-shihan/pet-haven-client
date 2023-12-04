@@ -3,9 +3,9 @@ import useAuth from "../hooks/useAuth";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import Swal from "sweetalert2";
 import Lottie from "lottie-react";
 import loginAnimation from "../assets/animaiton/loginAnimation.json";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const [errorMessage, setErrorMessage] = useState("");
@@ -24,24 +24,18 @@ const Login = () => {
 
     setSuccessMessage("");
     setErrorMessage("");
-
+    const toastId = toast.loading("Logging....");
     signInUser(email, password)
       .then((result) => {
         console.log(result.user);
         e.target.reset();
 
-        // React Toast
-        Swal.fire({
-          title: "Success!",
-          text: "Phone added successfully",
-          icon: "success",
-          confirmButtonText: "Ok",
-        });
-
+        toast.success("Logged In Successfully", { id: toastId });
         // Navigate After Login
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
+        toast.error(error.message);
         const errorMessage = error.message;
         setErrorMessage(errorMessage);
         console.error(error);
@@ -50,10 +44,13 @@ const Login = () => {
   const handleGoogleLogin = () => {
     googleSignIn()
       .then((result) => {
+        const toastId = toast.loading("Logging....");
+        toast.success("Logged In ..", { id: toastId });
         console.log(result.user);
         navigate(location?.state ? location?.state : "/");
       })
       .catch((error) => {
+        toast.error(error.message);
         console.error(error);
       });
   };

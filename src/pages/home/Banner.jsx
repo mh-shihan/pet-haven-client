@@ -58,13 +58,13 @@ const Banner = () => {
         )}
       >
         {/* First Slide */}
-        <div className="relative ">
+        <div className="relative  ">
           <img
             src={slide1}
             alt="image 1"
             className="h-full w-full object-cover"
           />
-          <div className="absolute right-2 lg:right-[12%] xl:right-[20%] bottom-5 md:bottom-24 lg:bottom-[25%] xl:bottom-[40%] lg:space-y-5">
+          <div className="absolute right-2 lg:right-[12%] xl:right-[15%] 2xl:right-[20%]  bottom-5 md:bottom-24 lg:bottom-[25%] xl:bottom-[35%] 2xl:[45%]  lg:space-y-5">
             <h3 className="text-[#F0A83D] inline-block lg:px-4 text-xs  md:text-3xl font-bold rounded-sm bg-white">
               We Keep Pets For Pleasure
             </h3>
@@ -88,7 +88,7 @@ const Banner = () => {
             alt="image 2"
             className="h-full w-full object-cover"
           />
-          <div className="absolute right-2 lg:right-[12%] bottom-5 md:bottom-24 lg:bottom-[25%] lg:space-y-5">
+          <div className="absolute right-2 lg:right-[12%] xl:right-[15%] 2xl:right-[20%]  bottom-5 md:bottom-24 lg:bottom-[25%] xl:bottom-[35%] 2xl:[45%]  lg:space-y-5">
             <h3 className="text-[#F0A83D] inline-block lg:px-4 text-xs  md:text-3xl font-bold rounded-sm bg-white">
               We Keep Pets For Pleasure
             </h3>
@@ -112,7 +112,7 @@ const Banner = () => {
             alt="image 3"
             className="h-full w-full object-cover"
           />
-          <div className="absolute right-2 lg:right-[12%] bottom-5 md:bottom-24 lg:bottom-[25%] lg:space-y-5">
+          <div className="absolute right-2 lg:right-[12%] xl:right-[15%] 2xl:right-[20%]  bottom-5 md:bottom-24 lg:bottom-[25%] xl:bottom-[35%] 2xl:[45%]  lg:space-y-5">
             <h3 className="text-[#F0A83D] inline-block lg:px-4 text-xs  md:text-3xl font-bold rounded-sm bg-white">
               We Keep Pets For Pleasure
             </h3>
