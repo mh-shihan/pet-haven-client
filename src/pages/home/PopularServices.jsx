@@ -1,6 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxios from "../../hooks/useAxios";
 import PopularServiceCard from "../../components/serviceCard/popularServiceCard";
+import loadingAnimation from "../../assets/animaiton/loadingAnimation.json";
+import Lottie from "lottie-react";
 
 const PopularServices = () => {
   const axiosInstance = useAxios();
@@ -16,6 +18,14 @@ const PopularServices = () => {
   });
   const popularServices = data?.data;
   console.log(popularServices);
+
+  if (isLoading) {
+    return (
+      <div className="w-full flex justify-center items-center">
+        <Lottie animationData={loadingAnimation}></Lottie>
+      </div>
+    );
+  }
 
   return (
     <div className="my-5 lg:my-20  ">
