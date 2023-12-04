@@ -7,7 +7,7 @@ const Home = () => {
       <header>
         <Banner></Banner>
       </header>
-      <main className="w-11/12 mx-auto">
+      <main className=" max-w-7xl mx-auto p-1">
         <PopularServices></PopularServices>
       </main>
     </div>

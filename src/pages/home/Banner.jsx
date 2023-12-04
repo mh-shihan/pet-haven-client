@@ -58,13 +58,13 @@ const Banner = () => {
         )}
       >
         {/* First Slide */}
-        <div className="relative  ">
+        <div className="relative ">
           <img
             src={slide1}
-            alt="image 1"
-            className="h-full w-full object-cover"
+            alt="image 3"
+            className="h-[80vh] 2xl:h-full w-full object-cover"
           />
-          <div className="absolute right-2 lg:right-[12%] xl:right-[15%] 2xl:right-[20%]  bottom-5 md:bottom-24 lg:bottom-[25%] xl:bottom-[35%] 2xl:[45%]  lg:space-y-5">
+          <div className="absolute right-2 lg:right-[12%] xl:right-[15%] 2xl:right-[20%] bottom-32 md:bottom-24 lg:bottom-[25%] xl:bottom-[35%] 2xl:[45%]  lg:space-y-5">
             <h3 className="text-[#F0A83D] inline-block lg:px-4 text-xs  md:text-3xl font-bold rounded-sm bg-white">
               We Keep Pets For Pleasure
             </h3>
@@ -76,19 +76,21 @@ const Banner = () => {
               <br />
               So book your service
             </h4>
-            <button className="bg-[#F0A83D]  hover:bg-[#180202] px-4 md:py-2 text-base-100 text-xs md:text-xl rounded-l-full rounded-r-full">
-              Book Now
-            </button>
+            <div className="w-full flex justify-center">
+              <button className="bg-[#F0A83D]  hover:bg-[#180202] px-4 md:py-2 text-base-100 text-xs md:text-xl rounded-l-full rounded-r-full">
+                Book Now
+              </button>
+            </div>
           </div>
         </div>
         {/* Second Slide */}
         <div className="relative ">
           <img
             src={slide2}
-            alt="image 2"
-            className="h-full w-full object-cover"
+            alt="image 3"
+            className="h-[80vh] 2xl:h-full w-full object-cover"
           />
-          <div className="absolute right-2 lg:right-[12%] xl:right-[15%] 2xl:right-[20%]  bottom-5 md:bottom-24 lg:bottom-[25%] xl:bottom-[35%] 2xl:[45%]  lg:space-y-5">
+          <div className="absolute right-2 lg:right-[12%] xl:right-[15%] 2xl:right-[20%] bottom-32 md:bottom-24 lg:bottom-[25%] xl:bottom-[35%] 2xl:[45%]  lg:space-y-5">
             <h3 className="text-[#F0A83D] inline-block lg:px-4 text-xs  md:text-3xl font-bold rounded-sm bg-white">
               We Keep Pets For Pleasure
             </h3>
@@ -100,9 +102,11 @@ const Banner = () => {
               <br />
               So book your service
             </h4>
-            <button className="bg-[#F0A83D]  hover:bg-[#180202] px-4 md:py-2 text-base-100 text-xs md:text-xl rounded-l-full rounded-r-full">
-              Book Now
-            </button>
+            <div className="w-full flex justify-center">
+              <button className="bg-[#F0A83D]  hover:bg-[#180202] px-4 md:py-2 text-base-100 text-xs md:text-xl rounded-l-full rounded-r-full">
+                Book Now
+              </button>
+            </div>
           </div>
         </div>
         {/* Third Slide */}
@@ -110,9 +114,9 @@ const Banner = () => {
           <img
             src={slide3}
             alt="image 3"
-            className="h-full w-full object-cover"
+            className="h-[80vh] 2xl:h-full w-full object-cover"
           />
-          <div className="absolute right-2 lg:right-[12%] xl:right-[15%] 2xl:right-[20%]  bottom-5 md:bottom-24 lg:bottom-[25%] xl:bottom-[35%] 2xl:[45%]  lg:space-y-5">
+          <div className="absolute right-2 lg:right-[12%] xl:right-[15%] 2xl:right-[20%] bottom-32 md:bottom-24 lg:bottom-[25%] xl:bottom-[35%] 2xl:[45%]  lg:space-y-5">
             <h3 className="text-[#F0A83D] inline-block lg:px-4 text-xs  md:text-3xl font-bold rounded-sm bg-white">
               We Keep Pets For Pleasure
             </h3>
@@ -124,9 +128,11 @@ const Banner = () => {
               <br />
               So book your service
             </h4>
-            <button className="bg-[#F0A83D]  hover:bg-[#180202] px-4 md:py-2 text-base-100 text-xs md:text-xl rounded-l-full rounded-r-full">
-              Book Now
-            </button>
+            <div className="w-full flex justify-center">
+              <button className="bg-[#F0A83D]  hover:bg-[#180202] px-4 md:py-2 text-base-100 text-xs md:text-xl rounded-l-full rounded-r-full">
+                Book Now
+              </button>
+            </div>
           </div>
         </div>
       </Carousel>

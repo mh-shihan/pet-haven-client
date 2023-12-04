@@ -35,7 +35,7 @@ const Login = () => {
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        toast.error(error.message);
+        toast.error(error.message, { id: toastId });
         const errorMessage = error.message;
         setErrorMessage(errorMessage);
         console.error(error);

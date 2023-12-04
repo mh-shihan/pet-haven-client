@@ -10,6 +10,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
+import useAxios from "../hooks/useAxios";
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
@@ -18,6 +19,7 @@ const AuthProvider = (props = {}) => {
   const { children } = props || {};
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const axiosSecureInstance = useAxios();
 
   const provider = new GoogleAuthProvider();
 
@@ -46,13 +48,22 @@ const AuthProvider = (props = {}) => {
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log("On Auth State change :", currentUser);
+      const userEmail = user?.email || currentUser?.email;
+      const loggedUser = { email: userEmail };
       setUser(currentUser);
       setLoading(false);
+
+      if (currentUser) {
+        axiosSecureInstance
+          .post("/auth/access-token", loggedUser)
+          .then((res) => console.log(res.data))
+          .catch((err) => console.log(err));
+      }
     });
     return () => {
       unSubscribe();
     };
-  }, []);
+  }, [user, axiosSecureInstance]);
 
   const authInfo = {
     auth,
