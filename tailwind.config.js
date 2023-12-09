@@ -7,7 +7,12 @@ export default module.exports = withMT({
     "./node_modules/flowbite/**/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "dark-gray": "#180202",
+        "lite-gray": "#F0A83D",
+      },
+    },
   },
   daisyui: {
     themes: ["light", "dark", "cupcake"],
