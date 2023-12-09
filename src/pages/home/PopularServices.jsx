@@ -3,6 +3,8 @@ import useAxios from "../../hooks/useAxios";
 import PopularServiceCard from "../../components/serviceCard/popularServiceCard";
 import loadingAnimation from "../../assets/animaiton/loadingAnimation.json";
 import Lottie from "lottie-react";
+import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 const PopularServices = () => {
   const axiosInstance = useAxios();
@@ -12,7 +14,7 @@ const PopularServices = () => {
     return res;
   };
 
-  const { data, isLoading, isError } = useQuery({
+  const { data, isLoading, isError, error } = useQuery({
     queryKey: ["Services"],
     queryFn: getPopularServices,
   });
@@ -27,9 +29,13 @@ const PopularServices = () => {
     );
   }
 
+  if (isError) {
+    toast.error(error);
+  }
+
   return (
     <div className="my-5 lg:my-20  ">
-      <h1 className="text-3xl lg:text-5xl text-[#180202] text-center font-extrabold mb-5 2xl:mb-20">
+      <h1 className="text-3xl lg:text-6xl text-[#180202] text-center font-extrabold mb-5 2xl:mb-20">
         Popular Services
       </h1>
       <div className="flex justify-center">
@@ -42,11 +48,14 @@ const PopularServices = () => {
           ))}
         </div>
       </div>
-      <div className="flex justify-center mt-6 md:mt-10">
-        <button className="btn bg-[#F0A83D] hover:bg-[#180202] hover:border-[#180202] text-white flex">
-          All Services
-        </button>
-      </div>
+      <Link to="/services">
+        {" "}
+        <div className="flex justify-center mt-6 md:mt-10">
+          <button className="btn bg-[#F0A83D] hover:bg-[#180202] hover:border-[#180202] text-white flex">
+            All Services
+          </button>
+        </div>
+      </Link>
     </div>
   );
 };

@@ -1,7 +1,8 @@
 import { FaArrowRight } from "react-icons/fa";
-const PopularServiceCard = (props = {}) => {
-  const { popularService } = props || {};
-  // console.log(Object.keys(popularService).join(", "));
+
+const ServiceCard = (props = {}) => {
+  const { service } = props || {};
+  // console.log(Object.keys(allServices).join(", "));
   const {
     serviceImage,
     serviceName,
@@ -10,10 +11,10 @@ const PopularServiceCard = (props = {}) => {
     providerName,
     serviceArea,
     servicePrice,
-  } = popularService;
+  } = service;
 
   return (
-    <div className="relative flex bg-clip-border rounded-xl bg-white text-gray-700 shadow-md w-full max-w-[40rem] flex-col lg:flex-row -hidden transition-all hover:scale-105  hover:shadow-2xl">
+    <div className="relative flex bg-clip-border rounded-xl bg-white text-gray-700 shadow-md w-full max-w-[40rem] flex-col lg:flex-row -hidden transition-all hover:scale-105  hover:shadow-2xl mb-6">
       <div className="relative lg:w-2/5 m-0 overflow-hidden  bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
         <img
           src={serviceImage}
@@ -54,4 +55,4 @@ const PopularServiceCard = (props = {}) => {
   );
 };
 
-export default PopularServiceCard;
+export default ServiceCard;

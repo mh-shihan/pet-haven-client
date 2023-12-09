@@ -19,7 +19,7 @@ const NavBar = () => {
       </li>
       <li>
         <NavLink to={"/services"}>
-          <a>Service</a>
+          <a>All Services</a>
         </NavLink>
       </li>
 

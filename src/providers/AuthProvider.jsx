@@ -58,6 +58,8 @@ const AuthProvider = (props = {}) => {
           .post("/auth/access-token", loggedUser)
           .then((res) => console.log(res.data))
           .catch((err) => console.log(err));
+      } else {
+        axiosSecureInstance.post("/logOut", loggedUser);
       }
     });
     return () => {
