@@ -9,5 +9,8 @@ export default module.exports = withMT({
   theme: {
     extend: {},
   },
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  },
   plugins: [require("daisyui"), require("flowbite/plugin")],
 });

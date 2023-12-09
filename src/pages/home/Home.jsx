@@ -1,3 +1,4 @@
+import Contact from "../../components/contact/Contact";
 import Banner from "./Banner";
 import PopularServices from "./PopularServices";
 
@@ -9,6 +10,7 @@ const Home = () => {
       </header>
       <main className=" max-w-7xl mx-auto p-1">
         <PopularServices></PopularServices>
+        <Contact></Contact>
       </main>
     </div>
   );
