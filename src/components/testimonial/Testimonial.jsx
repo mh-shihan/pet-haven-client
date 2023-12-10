@@ -8,7 +8,7 @@ const Testimonial = () => {
       <div className="flex justify-center">
         <img src={logo} alt="" />
       </div>
-      <h1 className=" text-4xl lg:text-6xl font-extrabold text-[#180202] text-center mb-6 ">
+      <h1 className=" text-4xl lg:text-6xl font-extrabold text-dark-gray text-center mb-6 ">
         Our Client Say
       </h1>
       <div className="carousel w-full h-72 md:h-48 lg:h-72 lg:-mt-16">

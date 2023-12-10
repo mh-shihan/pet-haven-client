@@ -35,7 +35,7 @@ const PopularServices = () => {
 
   return (
     <div className="my-5 lg:my-20  ">
-      <h1 className="text-3xl lg:text-6xl text-[#180202] text-center font-extrabold mb-5 2xl:mb-20">
+      <h1 className="text-3xl lg:text-6xl text-dark-gray text-center font-extrabold mb-5 2xl:mb-20">
         Popular Services
       </h1>
       <div className="flex justify-center">
@@ -51,7 +51,7 @@ const PopularServices = () => {
       <Link to="/services">
         {" "}
         <div className="flex justify-center mt-6 md:mt-10">
-          <button className="btn bg-[#F0A83D] hover:bg-[#180202] hover:border-[#180202] text-white flex">
+          <button className="btn bg-[#F0A83D] hover:bg-dark-gray hover:border-dark-gray text-white flex">
             All Services
           </button>
         </div>

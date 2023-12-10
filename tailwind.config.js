@@ -9,8 +9,9 @@ export default module.exports = withMT({
   theme: {
     extend: {
       colors: {
-        "dark-gray": "#180202",
+        "dark-gray": "#3c2313",
         "lite-gray": "#F0A83D",
+        color: "#666666",
       },
     },
   },

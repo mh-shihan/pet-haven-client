@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div className="flex flex-col md:flex-row gap-4 shadow-lg p-4 mb-10">
       <div className="w-full md:w-2/5">
-        <h2 className="text-3xl font-bold mb-4 text-[#180202]">Contact Info</h2>
+        <h2 className="text-3xl font-bold mb-4 text-dark-gray">Contact Info</h2>
         <p className="text-gray-600 text-sm mb-4">
           Have questions or ready to make your tech upgrade? Reach out to us at
           Pet Haven! Our dedicated team is here to assist you. Contact us for
@@ -35,7 +35,7 @@ const Contact = () => {
       </div>
 
       <div className="flex-1">
-        <h2 className="text-3xl font-bold mb-4 text-[#180202]">Contact Form</h2>
+        <h2 className="text-3xl font-bold mb-4 text-dark-gray">Contact Form</h2>
         <div>
           <TextBox></TextBox>
         </div>

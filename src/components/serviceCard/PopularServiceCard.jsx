@@ -22,7 +22,7 @@ const PopularServiceCard = (props = {}) => {
         />
       </div>
       <div className="p-6  ">
-        <h6 className="block mb-4 text-[#180202] font-sans text-2xl antialiased font-semibold leading-relaxed tracking-normal  uppercase">
+        <h6 className="block mb-4 text-dark-gray font-sans text-2xl antialiased font-semibold leading-relaxed tracking-normal  uppercase">
           {serviceName}
         </h6>
 
@@ -33,20 +33,20 @@ const PopularServiceCard = (props = {}) => {
         <div className="flex justify-between">
           <div className="flex gap-4">
             <div className="avatar">
-              <div className="w-12 h-12 rounded-full ring-1 ring-[#180202] ">
+              <div className="w-12 h-12 rounded-full ring-1 ring-dark-gray ">
                 <img src={providerImage} />
               </div>
             </div>
             <div>
-              <h3 className="font-bold text-[#180202]">{providerName}</h3>
+              <h3 className="font-bold text-dark-gray">{providerName}</h3>
               <p>{serviceArea}</p>
             </div>
           </div>
-          <p className="mr-4 font-bold text-[#180202]">
+          <p className="mr-4 font-bold text-dark-gray">
             Price: ${servicePrice}
           </p>
         </div>
-        <button className="btn btn-block bg-transparent border-transparent mt-8 font-bold text-[#180202]">
+        <button className="btn btn-block bg-transparent border-transparent mt-8 font-bold text-dark-gray">
           View Details <FaArrowRight />
         </button>
       </div>

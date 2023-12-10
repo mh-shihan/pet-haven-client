@@ -14,7 +14,7 @@ const Banner = () => {
             color="white"
             size="lg"
             onClick={handlePrev}
-            className="!absolute top-2/4 lg:left-4 2xl:left-24 -translate-y-2/4 lg:bg-[#F0A83D] rounded-full hover:bg-[#180202]"
+            className="!absolute top-2/4 lg:left-4 2xl:left-24 -translate-y-2/4 lg:bg-[#F0A83D] rounded-full hover:bg-dark-gray"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ const Banner = () => {
             color="white"
             size="lg"
             onClick={handleNext}
-            className="!absolute top-2/4 !right-4 2xl:!right-24 -translate-y-2/4  lg:bg-[#F0A83D] rounded-full hover:bg-[#180202]"
+            className="!absolute top-2/4 !right-4 2xl:!right-24 -translate-y-2/4  lg:bg-[#F0A83D] rounded-full hover:bg-dark-gray"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -68,16 +68,16 @@ const Banner = () => {
             <h3 className="text-[#F0A83D] inline-block lg:px-4 text-xs  md:text-3xl font-bold rounded-sm bg-white">
               We Keep Pets For Pleasure
             </h3>
-            <h2 className=" text-xs md:text-4xl lg:font-extrabold   text-[#180202]">
+            <h2 className=" text-xs md:text-4xl lg:font-extrabold   text-dark-gray">
               Helping Your Pets Get Rid <br /> of Annoying pets
             </h2>
-            <h4 className="text-[#180202] hidden lg:block">
+            <h4 className="text-dark-gray hidden lg:block">
               We can do a anything for your pet. So do not worry about it.
               <br />
               So book your service
             </h4>
             <div className="w-full flex justify-center">
-              <button className="bg-[#F0A83D]  hover:bg-[#180202] px-4 md:py-2 text-base-100 text-xs md:text-xl rounded-l-full rounded-r-full">
+              <button className="bg-[#F0A83D]  hover:bg-dark-gray px-4 md:py-2 text-base-100 text-xs md:text-xl rounded-l-full rounded-r-full">
                 Book Now
               </button>
             </div>
@@ -94,16 +94,16 @@ const Banner = () => {
             <h3 className="text-[#F0A83D] inline-block lg:px-4 text-xs  md:text-3xl font-bold rounded-sm bg-white">
               We Keep Pets For Pleasure
             </h3>
-            <h2 className=" text-xs md:text-4xl lg:font-extrabold   text-[#180202]">
+            <h2 className=" text-xs md:text-4xl lg:font-extrabold   text-dark-gray">
               Helping Your Pets Get Rid <br /> of Annoying pets
             </h2>
-            <h4 className="text-[#180202] hidden lg:block">
+            <h4 className="text-dark-gray hidden lg:block">
               We can do a anything for your pet. So do not worry about it.
               <br />
               So book your service
             </h4>
             <div className="w-full flex justify-center">
-              <button className="bg-[#F0A83D]  hover:bg-[#180202] px-4 md:py-2 text-base-100 text-xs md:text-xl rounded-l-full rounded-r-full">
+              <button className="bg-[#F0A83D]  hover:bg-dark-gray px-4 md:py-2 text-base-100 text-xs md:text-xl rounded-l-full rounded-r-full">
                 Book Now
               </button>
             </div>
@@ -120,16 +120,16 @@ const Banner = () => {
             <h3 className="text-[#F0A83D] inline-block lg:px-4 text-xs  md:text-3xl font-bold rounded-sm bg-white">
               We Keep Pets For Pleasure
             </h3>
-            <h2 className=" text-xs md:text-4xl lg:font-extrabold   text-[#180202]">
+            <h2 className=" text-xs md:text-4xl lg:font-extrabold   text-dark-gray">
               Helping Your Pets Get Rid <br /> of Annoying pets
             </h2>
-            <h4 className="text-[#180202] hidden lg:block">
+            <h4 className="text-dark-gray hidden lg:block">
               We can do a anything for your pet. So do not worry about it.
               <br />
               So book your service
             </h4>
             <div className="w-full flex justify-center">
-              <button className="bg-[#F0A83D]  hover:bg-[#180202] px-4 md:py-2 text-base-100 text-xs md:text-xl rounded-l-full rounded-r-full">
+              <button className="bg-[#F0A83D]  hover:bg-dark-gray px-4 md:py-2 text-base-100 text-xs md:text-xl rounded-l-full rounded-r-full">
                 Book Now
               </button>
             </div>

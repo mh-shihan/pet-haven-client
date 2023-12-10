@@ -26,7 +26,7 @@ export function CommentBoxTextarea() {
             <Button size="sm" color="red" variant="text" className="rounded-md">
               Cancel
             </Button>
-            <Button size="sm" className="rounded-md bg-[#180202]">
+            <Button size="sm" className="rounded-md bg-dark-gray">
               Post Comment
             </Button>
           </div>

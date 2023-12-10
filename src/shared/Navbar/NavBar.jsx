@@ -31,7 +31,7 @@ const NavBar = () => {
     <div className="flex items-center gap-2">
       <button
         onClick={handleLogOut}
-        className="btn-sm bg-lite-gray text-white rounded-md md:btn md:text-white md:bg-[#F0A83D] md:hover:bg-[#180202] md:hover:border-dark-gray md:border-[#F0A83D]  "
+        className="btn-sm bg-lite-gray text-white rounded-md md:btn md:text-white md:bg-[#F0A83D] md:hover:bg-dark-gray md:hover:border-dark-gray md:border-[#F0A83D]  "
       >
         Log Out
       </button>
@@ -91,13 +91,13 @@ const NavBar = () => {
           </div>
           <Link to={"/"}>
             <a className=" text-2xl md:text-5xl  ">
-              <span className="text-[#180202] font-bold">Pet</span>
+              <span className="text-dark-gray font-bold">Pet</span>
               <span className="font-extrabold text-[#F0A83D]">Haven</span>
             </a>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-lg font-bold text-[#180202] ">
+          <ul className="menu menu-horizontal px-1 text-lg font-bold text-dark-gray ">
             {navLinks}
           </ul>
         </div>
@@ -108,7 +108,7 @@ const NavBar = () => {
               <div>{profile}</div>
             ) : (
               <Link to="/login">
-                <button className="  btn-sm bg-lite-gray rounded-md text-white md:btn  md:bg-[#F0A83D] md:hover:bg-[#180202] md:border-[#F0A83D] md:text-white ml-2">
+                <button className="  btn-sm bg-lite-gray rounded-md text-white md:btn  md:bg-[#F0A83D] md:hover:bg-dark-gray md:border-[#F0A83D] md:text-white ml-2">
                   Login
                 </button>
               </Link>

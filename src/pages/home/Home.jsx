@@ -1,3 +1,4 @@
+import About from "../../components/about/About";
 import Contact from "../../components/contact/Contact";
 import Testimonial from "../../components/testimonial/Testimonial";
 import Banner from "./Banner";
@@ -11,6 +12,7 @@ const Home = () => {
       </header>
       <main className=" max-w-7xl mx-auto p-1">
         <PopularServices></PopularServices>
+        <About></About>
         <Testimonial></Testimonial>
         <Contact></Contact>
       </main>

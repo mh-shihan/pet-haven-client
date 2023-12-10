@@ -72,7 +72,7 @@ const SignUp = () => {
   return (
     <div className="w-11/12 mx-auto flex items-center flex-col md:flex-row mt-20">
       <div className="space-y-5 w-1/2">
-        <h1 className="text-3xl md:text-5xl font-bold text-center mt-6 text-[#180202]">
+        <h1 className="text-3xl md:text-5xl font-bold text-center mt-6 text-dark-gray">
           REGISTER NOW
         </h1>
         <Lottie animationData={signUpAnimation} loop={false}></Lottie>
@@ -143,21 +143,21 @@ const SignUp = () => {
 
           <div className="form-control mt-3"></div>
           <div className="form-control mt-6">
-            <button className="btn bg-[#F0A83D] hover:bg-[#180202] font-bold text-xl text-white ">
+            <button className="btn bg-[#F0A83D] hover:bg-dark-gray font-bold text-xl text-white ">
               Register
             </button>
           </div>
         </form>
         <button
           onClick={handleGoogleLogin}
-          className="btn mt-4 hover:text-[#180202] "
+          className="btn mt-4 hover:text-dark-gray "
         >
           <FcGoogle className="text-2xl"></FcGoogle>
           Sign in with Google
         </button>
         <p className=" text-center ">
           Already have an account? Go To{" "}
-          <Link className="text-[#180202] font-bold " to="/login">
+          <Link className="text-dark-gray font-bold " to="/login">
             Login
           </Link>
         </p>

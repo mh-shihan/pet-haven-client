@@ -56,7 +56,7 @@ const Services = () => {
   return (
     <div className="max-w-7xl mx-auto p-1 my-20">
       <div className="flex flex-col  justify-center items-center  my-10">
-        <h1 className=" text-6xl text-[#180202] font-extrabold">
+        <h1 className=" text-6xl text-dark-gray font-extrabold">
           <span className="">Our</span> services
         </h1>
         <div className="w-full mt-4 flex justify-center  ">
@@ -69,7 +69,7 @@ const Services = () => {
             />
             <button
               type="submit"
-              className="text-3xl cursor-pointer bg-[#F0A83D] hover:bg-[#180202]  text-white font-extrabold p-2 input input-bordered ml-2    "
+              className="text-3xl cursor-pointer bg-[#F0A83D] hover:bg-dark-gray  text-white font-extrabold p-2 input input-bordered ml-2    "
             >
               <CiSearch />
             </button>
@@ -91,7 +91,7 @@ const Services = () => {
         {!showMore && (
           <button
             onClick={() => setShowMore(true)}
-            className="btn bg-[#F0A83D] hover:bg-[#180202] hover:border-[#180202] text-white flex"
+            className="btn bg-[#F0A83D] hover:bg-dark-gray hover:border-dark-gray text-white flex"
           >
             See More
           </button>
