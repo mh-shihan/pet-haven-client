@@ -1,8 +1,10 @@
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const PopularServiceCard = (props = {}) => {
   const { popularService } = props || {};
   // console.log(Object.keys(popularService).join(", "));
   const {
+    _id,
     serviceImage,
     serviceName,
     serviceDescription,
@@ -46,9 +48,12 @@ const PopularServiceCard = (props = {}) => {
             Price: ${servicePrice}
           </p>
         </div>
-        <button className="btn btn-block bg-transparent border-transparent mt-8 font-bold text-dark-gray">
-          View Details <FaArrowRight />
-        </button>
+        <Link to={`/serviceDetails/${_id}`}>
+          {" "}
+          <button className="btn btn-block bg-transparent border-transparent mt-8 font-bold text-dark-gray">
+            View Details <FaArrowRight />
+          </button>
+        </Link>
       </div>
     </div>
   );

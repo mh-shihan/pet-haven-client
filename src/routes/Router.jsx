@@ -6,6 +6,8 @@ import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 import Home from "../pages/home/Home";
 import Services from "../pages/allServices/Services";
+import ServiceDetails from "../pages/serviceDetails/ServiceDetails";
+import PrivateRoute from "./PrivateRoute";
 // import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
@@ -29,6 +31,16 @@ const router = createBrowserRouter([
       {
         path: "services",
         element: <Services></Services>,
+      },
+      {
+        path: "/serviceDetails/:id",
+        element: (
+          <PrivateRoute>
+            <ServiceDetails></ServiceDetails>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/api/v1/services/${params.id}`),
       },
     ],
   },
