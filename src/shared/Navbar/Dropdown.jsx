@@ -2,11 +2,15 @@ import { IoIosArrowDropdown } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 
 const Dropdown = () => {
+  const handleDropdownClick = (e) => {
+    e.preventDefault();
+    console.log("Dropdown clicked");
+  };
   return (
     <NavLink className="flex justify-center items-center">
       <li className="dropdown dropdown-bottom">
         <label tabIndex={0} className=" flex">
-          <p>DashBoard</p>
+          <p onClick={handleDropdownClick}>DashBoard</p>
           <span className="text-xl font-bold ">
             <IoIosArrowDropdown />
           </span>

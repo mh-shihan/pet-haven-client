@@ -1,9 +1,12 @@
 import { useLoaderData } from "react-router-dom";
+import BookNowModal from "./BookNowModal";
+import { useState } from "react";
+import useAuth from "../../hooks/useAuth";
 
 const ServiceDetails = () => {
+  const { user } = useAuth();
+  const ServiceDetailsData = useLoaderData();
   const {
-    _id,
-    serviceType,
     serviceImage,
     serviceName,
     serviceDescription,
@@ -11,7 +14,17 @@ const ServiceDetails = () => {
     providerName,
     serviceArea,
     servicePrice,
-  } = useLoaderData();
+  } = ServiceDetailsData;
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleBookNow = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
   return (
     <div className="max-w-7xl mx-auto p-1 mt-20 lg:mt-28 mb-20">
@@ -47,9 +60,19 @@ const ServiceDetails = () => {
               </p>
             </div>
 
-            <button className="mt-6 lg:mt-10 btn bg-lite-gray text text-white hover:bg-dark-gray px-8">
+            <button
+              onClick={handleBookNow}
+              className="mt-6 lg:mt-10 btn bg-lite-gray text text-white hover:bg-dark-gray px-8"
+            >
               Book Now
             </button>
+            <BookNowModal
+              isVisible={showModal}
+              setShowModal={setShowModal}
+              handleCloseModal={handleCloseModal}
+              ServiceDetailsData={ServiceDetailsData}
+              user={user}
+            ></BookNowModal>
           </div>
           <img
             src={serviceImage}

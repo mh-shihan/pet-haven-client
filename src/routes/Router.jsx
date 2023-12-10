@@ -8,6 +8,7 @@ import Home from "../pages/home/Home";
 import Services from "../pages/allServices/Services";
 import ServiceDetails from "../pages/serviceDetails/ServiceDetails";
 import PrivateRoute from "./PrivateRoute";
+import AddService from "../pages/addService/AddService";
 // import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
@@ -41,6 +42,14 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/api/v1/services/${params.id}`),
+      },
+      {
+        path: "/addService",
+        element: (
+          <PrivateRoute>
+            <AddService></AddService>
+          </PrivateRoute>
+        ),
       },
     ],
   },
