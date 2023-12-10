@@ -31,7 +31,7 @@ const NavBar = () => {
     <div className="flex items-center gap-2">
       <button
         onClick={handleLogOut}
-        className="btn  text-white bg-[#F0A83D] hover:bg-[#180202] border-[#F0A83D]  hover:border-[#F9A83D]"
+        className="btn-sm bg-lite-gray text-white rounded-md md:btn md:text-white md:bg-[#F0A83D] md:hover:bg-[#180202] md:hover:border-dark-gray md:border-[#F0A83D]  "
       >
         Log Out
       </button>
@@ -108,7 +108,7 @@ const NavBar = () => {
               <div>{profile}</div>
             ) : (
               <Link to="/login">
-                <button className=" btn  bg-[#F0A83D] hover:bg-[#180202] border-[#F0A83D] text-white ml-2">
+                <button className="  btn-sm bg-lite-gray rounded-md text-white md:btn  md:bg-[#F0A83D] md:hover:bg-[#180202] md:border-[#F0A83D] md:text-white ml-2">
                   Login
                 </button>
               </Link>
