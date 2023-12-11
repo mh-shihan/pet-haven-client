@@ -45,7 +45,7 @@ const Login = () => {
     googleSignIn()
       .then((result) => {
         const toastId = toast.loading("Logging....");
-        toast.success("Logged In ..", { id: toastId });
+        toast.success("Logged In Successfully", { id: toastId });
         console.log(result.user);
         navigate(location?.state ? location?.state : "/");
       })

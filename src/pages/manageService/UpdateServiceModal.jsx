@@ -1,13 +1,26 @@
 import toast from "react-hot-toast";
-import useAuth from "../../hooks/useAuth";
 import useAxios from "../../hooks/useAxios";
 
-const AddService = () => {
-  const { user } = useAuth();
-  const { displayName, email, photoURL } = user;
+const UpdateServiceModal = (props = {}) => {
+  const {
+    isVisible,
+    handleCloseModal,
+    userAddedService,
+    user,
+    setShowModal,
+    refetch,
+  } = props || {};
   const axiosInstance = useAxios();
 
-  const handleAddService = async (e) => {
+  if (!isVisible) {
+    return null;
+  }
+
+  const { displayName, email, photoURL } = user;
+  const { serviceImage, serviceName, servicePrice, serviceArea, _id } =
+    userAddedService;
+
+  const handleUpdateService = async (e) => {
     e.preventDefault();
     const form = e.target;
     const serviceName = form.serviceName.value;
@@ -27,28 +40,28 @@ const AddService = () => {
     };
     console.log(addServiceData);
 
-    const toastId = toast.loading("Service Adding....");
-    const res = await axiosInstance.post(
-      "/user/create-service",
-      addServiceData
-    );
+    const toastId = toast.loading("Service Updating....");
+    const res = await axiosInstance.put(`/user/service/${_id}`, addServiceData);
+    console.log(res?.data);
     if (res?.data?.acknowledged) {
-      toast.success("Service Added Successfully", { id: toastId });
+      toast.success("Service Updated Successfully", { id: toastId });
+      setShowModal(false);
+      refetch();
       form.reset();
     }
   };
 
   return (
-    <div className="max-w-7xl mx-auto mb-10 mt-28">
+    <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center z-50 duration-1000 ">
       <div className="  shadow-sm  pb-4 ">
-        <h1 className="text-5xl font-extrabold my-10 text-center text-dark-gray ">
-          Add Service
-        </h1>
         <form
-          onSubmit={handleAddService}
-          className="flex justify-center text-dark-gray  "
+          onSubmit={handleUpdateService}
+          className="flex justify-center text-dark-gray w-screen "
         >
-          <div className="border w-full md:w-3/4 rounded-xl  px-4 md:px-10 pb-4 ">
+          <div className="bg-[#F4F3F0] border w-full md:w-3/4 rounded-xl  px-4 md:px-10 pb-4 ">
+            <h1 className="text-4xl font-extrabold my-4 text-center text-dark-gray    ">
+              Update Service
+            </h1>
             {/* Form Row of User Name and User Email  */}
             <div className="md:flex mb-0 md:mb-8">
               <div className="form-control w-full md:w-1/2">
@@ -96,6 +109,7 @@ const AddService = () => {
                 <label className="input-group">
                   <input
                     type="text"
+                    defaultValue={serviceName}
                     placeholder="Service Name"
                     name="serviceName"
                     required
@@ -110,6 +124,7 @@ const AddService = () => {
                 <label className="input-group">
                   <input
                     type="text"
+                    defaultValue={servicePrice}
                     placeholder="price"
                     name="price"
                     required
@@ -129,6 +144,7 @@ const AddService = () => {
                 <label className="input-group">
                   <input
                     type="text"
+                    defaultValue={serviceArea}
                     placeholder="Service Area"
                     name="serviceArea"
                     required
@@ -164,6 +180,7 @@ const AddService = () => {
                 <label className="input-group">
                   <input
                     type="text"
+                    defaultValue={serviceImage}
                     placeholder="Service Photo URL"
                     name="photo"
                     required
@@ -173,12 +190,18 @@ const AddService = () => {
               </div>
             </div>
             {/* Submit Button  */}
-            <div>
+            <div className="mt-6 flex justify-center gap-6">
               <input
                 type="submit"
-                value="Add Product"
-                className="btn btn-block bg-lite-gray hover:bg-dark-gray text-white  font-bold "
+                value="Update "
+                className="btn px-20 text-white hover:bg-dark-gray bg-lite-gray hover:scale-105 font-bold "
               />
+              <button
+                onClick={handleCloseModal}
+                className="btn bg-dark-gray hover:bg-lite-gray  hover:scale-105 text-white"
+              >
+                Close
+              </button>
             </div>
           </div>
         </form>
@@ -187,4 +210,4 @@ const AddService = () => {
   );
 };
 
-export default AddService;
+export default UpdateServiceModal;

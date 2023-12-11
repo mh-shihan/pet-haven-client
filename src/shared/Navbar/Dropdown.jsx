@@ -20,13 +20,13 @@ const Dropdown = () => {
           className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
         >
           <li>
-            <NavLink to={"/myService"}>
-              <a>My-Service</a>
+            <NavLink to={"/addService"}>
+              <a>Add-Service</a>
             </NavLink>
           </li>
           <li>
-            <NavLink to={"/addService"}>
-              <a>Add-Service</a>
+            <NavLink to={"/manageService"}>
+              <a>Manage-Service</a>
             </NavLink>
           </li>
           <li>

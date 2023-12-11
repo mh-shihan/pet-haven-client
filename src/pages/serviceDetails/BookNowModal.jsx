@@ -36,7 +36,7 @@ const BookNowModal = (props = {}) => {
     };
     console.log(bookingInfo);
 
-    const toastId = toast.loading("Logging....");
+    const toastId = toast.loading("Booking....");
     axiosInstance.post("/user/bookings", bookingInfo).then((res) => {
       console.log(res.data);
       if (res.data?.acknowledged) {
