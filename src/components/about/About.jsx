@@ -9,7 +9,7 @@ const About = () => {
         <img src={logo} alt="" />
         <h1 className="text-6xl font-extrabold text-dark-gray">About Us</h1>
       </div>
-      <div className="flex gap-10 mt-10">
+      <div className="flex flex-col-reverse lg:flex-row gap-10 mt-10">
         <div>
           <h3 className="text-4xl text-dark-gray font-extrabold mb-4">
             Caring for your pets

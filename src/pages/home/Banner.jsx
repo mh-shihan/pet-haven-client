@@ -2,6 +2,7 @@ import { Carousel, IconButton } from "@material-tailwind/react";
 import slide1 from "../../assets/banner/slide-1.png";
 import slide2 from "../../assets/banner/slide-2.png";
 import slide3 from "../../assets/banner/slide-3.png";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -103,9 +104,11 @@ const Banner = () => {
               So book your service
             </h4>
             <div className="w-full flex justify-center">
-              <button className="bg-[#F0A83D]  hover:bg-dark-gray px-4 md:py-2 text-base-100 text-xs md:text-xl rounded-l-full rounded-r-full">
-                Book Now
-              </button>
+              <Link to={"/mySchedule"}>
+                <button className="bg-[#F0A83D]  hover:bg-dark-gray px-4 md:py-2 text-base-100 text-xs md:text-xl rounded-l-full rounded-r-full">
+                  Book Now
+                </button>
+              </Link>
             </div>
           </div>
         </div>
