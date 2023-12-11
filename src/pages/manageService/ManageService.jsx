@@ -35,7 +35,6 @@ const ManageService = () => {
   if (isError) {
     toast.error(error);
   }
-  console.log("Inside Manage Service", data);
 
   return (
     <div className="mt-28  mb-20 max-w-7xl mx-auto">
