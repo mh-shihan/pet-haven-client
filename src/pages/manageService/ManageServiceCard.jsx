@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import UpdateServiceModal from "./UpdateServiceModal";
 import { useState } from "react";
 import useAuth from "../../hooks/useAuth";
+import useAxios from "../../hooks/useAxios";
+import Swal from "sweetalert2";
 
 const ManageServiceCard = (props = {}) => {
   const { userAddedService, refetch } = props || {};
   const { user } = useAuth();
   const [showModal, setShowModal] = useState(false);
+  const axiosInstance = useAxios();
 
   const {
     _id,
@@ -26,6 +29,27 @@ const ManageServiceCard = (props = {}) => {
 
   const handleCloseModal = () => {
     setShowModal(false);
+  };
+
+  const handleDeleteService = (id) => {
+    console.log(id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, remove it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosInstance.delete(`/user/service/${_id}`).then((res) => {
+          console.log(res.data);
+          Swal.fire("Deleted!", "Your Service has been deleted.", "success");
+          refetch();
+        });
+      }
+    });
   };
 
   return (
@@ -64,23 +88,22 @@ const ManageServiceCard = (props = {}) => {
             </p>
           </div>
           <div className="mt-2 flex justify-around">
-            <Link>
-              <button
-                onClick={handleUpdate}
-                className="btn bg-transparent border-dark-gray font-bold text-dark-gray hover:scale-105"
-              >
-                Update
-              </button>
-            </Link>
-            <Link>
-              <button className="btn bg-transparent border-dark-gray font-bold text-dark-gray hover:scale-105">
-                Delete
-              </button>
-            </Link>
+            <button
+              onClick={handleUpdate}
+              className="btn bg-transparent border-dark-gray font-bold text-dark-gray hover:scale-105"
+            >
+              Update
+            </button>
+
+            <button
+              onClick={() => handleDeleteService(_id)}
+              className="btn bg-transparent border-dark-gray font-bold text-dark-gray hover:scale-105"
+            >
+              Delete
+            </button>
           </div>
 
           <Link to={`/serviceDetails/${_id}`}>
-            {" "}
             <button className="btn btn-block bg-transparent border-transparent mt-2 font-bold text-dark-gray hover:scale-105  ">
               View Details <FaArrowRight />
             </button>

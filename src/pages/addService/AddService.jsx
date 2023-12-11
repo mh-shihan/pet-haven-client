@@ -34,7 +34,7 @@ const AddService = () => {
     );
     if (res?.data?.acknowledged) {
       toast.success("Service Added Successfully", { id: toastId });
-      form.reset();
+      // form.reset();
     }
   };
 
