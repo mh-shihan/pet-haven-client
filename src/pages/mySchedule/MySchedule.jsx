@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 import loadingAnimation from "../../assets/animaiton/loadingAnimation.json";
 import BookingRow from "./BookingRow";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const MySchedule = () => {
   const axiosInstance = useAxios();
@@ -55,6 +56,9 @@ const MySchedule = () => {
 
   return (
     <div className="mt-28 mb-20 max-w-7xl mx-auto p-1">
+      <Helmet>
+        <title>Pet Haven | My Schedule</title>
+      </Helmet>
       {bookings.length === 0 && (
         <div className="flex h-[50vh] justify-center items-center ">
           <h2 className="text-4xl text-dark-gray font-bold">

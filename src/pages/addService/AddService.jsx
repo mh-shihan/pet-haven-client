@@ -1,6 +1,7 @@
 import toast from "react-hot-toast";
 import useAuth from "../../hooks/useAuth";
 import useAxios from "../../hooks/useAxios";
+import { Helmet } from "react-helmet";
 
 const AddService = () => {
   const { user } = useAuth();
@@ -34,12 +35,15 @@ const AddService = () => {
     );
     if (res?.data?.acknowledged) {
       toast.success("Service Added Successfully", { id: toastId });
-      // form.reset();
+      form.reset();
     }
   };
 
   return (
     <div className="max-w-7xl mx-auto mb-10 mt-28">
+      <Helmet>
+        <title>Pet Haven | Add Services</title>
+      </Helmet>
       <div className="  shadow-sm  pb-4 ">
         <h1 className="text-5xl font-extrabold my-10 text-center text-dark-gray ">
           Add Service

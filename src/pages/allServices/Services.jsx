@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 import ServiceCard from "../../components/serviceCard/ServiceCard";
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
+import { Helmet } from "react-helmet";
 
 const Services = () => {
   const [showMore, setShowMore] = useState(false);
@@ -55,6 +56,9 @@ const Services = () => {
 
   return (
     <div className="max-w-7xl mx-auto p-1 my-20">
+      <Helmet>
+        <title>Pet Haven | All Services</title>
+      </Helmet>
       <div className="flex flex-col  justify-center items-center  my-10">
         <h1 className=" text-6xl text-dark-gray font-extrabold">
           <span className="">Our</span> services

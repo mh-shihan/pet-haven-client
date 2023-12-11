@@ -6,6 +6,7 @@ import loadingAnimation from "../../assets/animaiton/loadingAnimation.json";
 import toast from "react-hot-toast";
 import ManageServiceCard from "./ManageServiceCard";
 import noDataAnimation from "../../assets/animaiton/no-data-found-animation.json";
+import { Helmet } from "react-helmet";
 // import { useState } from "react";
 
 const ManageService = () => {
@@ -38,6 +39,9 @@ const ManageService = () => {
 
   return (
     <div className="mt-28  mb-20 max-w-7xl mx-auto">
+      <Helmet>
+        <title>Pet Haven | Manage Services</title>
+      </Helmet>
       {userAddedServices.length === 0 && (
         <div className="w-full flex justify-center items-center">
           <Lottie animationData={noDataAnimation}></Lottie>
